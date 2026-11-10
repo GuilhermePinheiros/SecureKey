@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador De Senhas</title>
+</head>
+<body>
+ <main class="app">
+    <section class="generator" aria-labelledby="page-title">
+
+      <header class="generator_header">
+
+
+
+
+
+       
+        <div class="brand">
+          <span class="brand__icon" aria-hidden="true">🔐</span>
+          <span class="brand__name">SecureKey</span>
+        </div>
+
+        <label class="mode-switch" for="mode-toggle">
+
+          <span class="mode-switch__text">Modo legível</span>
+                <input
+                  type="checkbox"
+                  id="mode-toggle"
+                  class="mode-switch__input"
+                >
+          <span class="mode-switch__track"></span>
+          
+        </label>
+
+
+        
+
+        <span class="status">
+          <span class="status__dot" aria-hidden="true"></span>
+          Gerador de senhas
+        </span>
+
+        <h1 class="generator__title" id="page-title">
+          Crie uma senha <span>forte.</span>
+        </h1>
+
+        <p class="generator__description">
+          Personalize sua senha e proteja suas contas com mais segurança.
+        </p>
+
+      </header>
+
+
+
+      <form class="password-form" id="password-form">
+
+        <div class="field">
+          <div class="field__header">
+            <label class="field__label" for="password-length">
+              Tamanho da senha
+            </label>
+
+            <output class="field__value" id="length-value" for="password-length">
+              16
+            </output>
+          </div>
+
+          <input
+            class="range-input"
+            id="password-length"
+            name="password-length"
+            type="range"
+            min="6"
+            max="64"
+            value="16"
+          >
+
+          <div class="range-labels" aria-hidden="true">
+            <span>6 caracteres</span>
+            <span>64 caracteres</span>
+          </div>
+        </div>
+
+        <div class="field" id="word-count-field" hidden>
+
+            <label class="field__label" for="word-count">
+              Quantidade de palavras
+            </label>
+
+            <select class="range-input" id="word-count" name="word-count">
+              <option value="2">2 palavras</option>
+              <option value="3" selected>3 palavras</option>
+              <option value="4">4 palavras</option>
+              <option value="5">5 palavras</option>
+              <option value="6">6 palavras</option>
+            </select>
+
+        </div>
+
+        <fieldset class="options">
+          <legend class="field__label">
+            Tipos de caracteres
+          </legend>
+
+          <label class="option" for="lowercase">
+            <input
+              class="option__checkbox"
+              id="lowercase"
+              name="character-types"
+              type="checkbox"
+              value="lowercase"
+              checked
+            >
+
+            <span class="option__content">
+              <span class="option__title">Letras minúsculas</span>
+              <span class="option__example">abcde...</span>
+            </span>
+          </label>
+
+          <label class="option" for="uppercase">
+            <input
+              class="option__checkbox"
+              id="uppercase"
+              name="character-types"
+              type="checkbox"
+              value="uppercase"
+            >
+
+            <span class="option__content">
+              <span class="option__title">Letras maiúsculas</span>
+              <span class="option__example">ABCDE...</span>
+            </span>
+          </label>
+
+          <label class="option" for="numbers">
+            <input
+              class="option__checkbox"
+              id="numbers"
+              name="character-types"
+              type="checkbox"
+              value="numbers"
+            >
+
+            <span class="option__content">
+              <span class="option__title">Números</span>
+              <span class="option__example">12345...</span>
+            </span>
+          </label>
+
+          <label class="option" for="symbols">
+            <input
+              class="option__checkbox"
+              id="symbols"
+              name="character-types"
+              type="checkbox"
+              value="symbols"
+            >
+
+            <span class="option__content">
+              <span class="option__title">Símbolos</span>
+              <span class="option__example">!@#$%...</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <div class="result">
+          <div class="result__header">
+            <span class="field__label">Sua senha</span>
+
+            <span class="result__badge" id="password-status">
+              Aguardando geração
+            </span>
+          </div>
+
+          <p
+            class="result__value"
+            id="password-output"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            Sua senha aparecerá aqui
+          </p>
+
+          <p class="result__message" id="message" role="status"></p>
+        </div>
+
+        <div class="actions">
+          <button
+            class="button button--primary"
+            id="generate-button"
+            type="submit"
+          >
+            <span>Gerar senha</span>
+
+          </button>
+
+          <button
+            class="button-copiar button--secondary"  
+            id="copy-button"
+            type="button"
+            disabled
+          > <!-- corrigir erro dos botões -->
+            Copiar senha
+          </button>
+        </div>
+
+      </form>
+
+      <footer class="generator__footer">
+        <span class="footer__icon" aria-hidden="true">🛡️</span>
+
+        <p>
+          Dica: use senhas diferentes para cada conta.
+        </p>
+      </footer>
+
+    </section>
+  </main>
+
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>
