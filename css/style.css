@@ -61,10 +61,11 @@ min-height: 100vh;
 min-height: 100dvh;
 display: grid;
 place-items: center;
-padding: 32px 16px;
+padding: 25px 16px;
 }
 
 .generator {
+
 
 
 width: min(100%, 520px);
@@ -73,6 +74,7 @@ background: color-mix(in srgb, var(--color-surface) 94%, transparent);
 border: 1px solid var(--color-border);
 border-radius: var(--radius-large);
 box-shadow: var(--shadow-card);
+
 }
 
 /* ========================================
@@ -81,11 +83,11 @@ box-shadow: var(--shadow-card);
 
 /* Interruptor de escolha de geração de senha, aleatória ou legível  */
 
-.generator__header {
+.generator_header {
 
 display: grid;
-gap: 16px;
-margin-bottom: 32px;
+gap: 5px;
+margin-bottom: 5px;
 }
 
 .mode-switch {
@@ -153,15 +155,15 @@ margin-bottom: 32px;
 .brand {
 display: flex;
 align-items: center;
-gap: 10px;
+gap: 5px;
 }
 
 .brand__icon {
-font-size: 1.7rem;
+font-size: 1.5rem;
 }
 
 .brand__name {
-font-size: 1.1rem;
+font-size: 1.2rem;
 font-weight: 750;
 letter-spacing: -0.03em;
 }
@@ -171,13 +173,14 @@ display: inline-flex;
 align-items: center;
 gap: 8px;
 width: fit-content;
-padding: 6px 10px;
+padding: 5px 10px;
 border: 1px solid rgb(52 211 153 / 20%);
 border-radius: 999px;
 background: rgb(52 211 153 / 8%);
 color: var(--color-success);
 font-size: 0.75rem;
 font-weight: 650;
+
 }
 
 .status__dot {
@@ -185,11 +188,12 @@ width: 7px;
 aspect-ratio: 1;
 border-radius: 50%;
 background: currentColor;
+
 }
 
 .generator__title {
 max-width: 420px;
-font-size: clamp(2rem, 6vw, 2.7rem);
+font-size: clamp(2rem, 6vw, 0.7rem);
 font-weight: 800;
 line-height: 1.1;
 letter-spacing: -0.055em;
@@ -197,12 +201,13 @@ letter-spacing: -0.055em;
 
 .generator__title span {
 color: var(--color-primary);
+
 }
 
 .generator__description {
 max-width: 390px;
 color: var(--color-text-muted);
-font-size: 0.95rem;
+font-size: 0.9rem;
 }
 
 /* ========================================
@@ -211,18 +216,21 @@ font-size: 0.95rem;
 
 .password-form {
 display: grid;
-gap: 28px;
+gap: 15px;
 }
 
 .field {
+
 display: grid;
-gap: 14px;
+gap: 12px;
+
 }
 
 /* Aparecer o seletor de quantidade de palavras
   */
 .field[hidden] { 
     display: none;
+    font-size: 1rem;
 }
 
 .field__header,
@@ -235,7 +243,7 @@ gap: 12px;
 
 .field__label {
 color: var(--color-text);
-font-size: 0.875rem;
+font-size: 0.7rem;
 font-weight: 700;
 }
 
@@ -258,7 +266,7 @@ font-variant-numeric: tabular-nums;
 
 .range-input {
 width: 100%;
-height: 6px;
+height: 15px 20px;
 border-radius: 999px;
 background: var(--color-border);
 accent-color: var(--color-primary);
@@ -284,20 +292,20 @@ font-size: 0.75rem;
 
 .options {
 display: grid;
-gap: 10px;
+gap: 7px;
 min-width: 0;
 border: 0;
 }
 
 .options legend {
-margin-bottom: 14px;
+margin-bottom: 10px;
 }
 
 .option {
 display: flex;
 align-items: center;
 gap: 12px;
-padding: 14px;
+padding: 12px;
 border: 1px solid var(--color-border);
 border-radius: var(--radius-medium);
 background: var(--color-surface-light);
@@ -318,8 +326,8 @@ background: color-mix(in srgb, var(--color-primary) 7%, var(--color-surface-ligh
 }
 
 .option__checkbox {
-width: 18px;
-height: 18px;
+width: 15px;
+height: 15px;
 flex: 0 0 auto;
 accent-color: var(--color-primary);
 cursor: pointer;
@@ -356,8 +364,8 @@ font-size: 0.75rem;
 
 .result {
 display: grid;
-gap: 14px;
-padding: 18px;
+gap: 10px;
+padding: 15px;
 border: 1px solid var(--color-border);
 border-radius: var(--radius-medium);
 background: var(--color-background);
@@ -365,7 +373,7 @@ background: var(--color-background);
 
 .result__badge {
 color: var(--color-text-muted);
-font-size: 0.7rem;
+font-size: 0.6rem;
 font-weight: 650;
 text-align: right;
 }
@@ -375,14 +383,14 @@ min-height: 54px;
 overflow-wrap: anywhere;
 color: var(--color-primary);
 font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-font-size: 1rem;
+font-size: 0.9rem;
 font-weight: 650;
 line-height: 1.8;
 user-select: all;
 }
 
 .result__message {
-min-height: 1.25rem;
+min-height: 1rem;
 color: var(--color-danger);
 font-size: 0.8rem;
 }
@@ -394,16 +402,16 @@ font-size: 0.8rem;
 .actions {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 12px;
+gap: 10px;
 }
 
 .button {
-min-height: 48px;
-padding: 12px 16px;
+min-height: 35px;
+padding: 9px 10px;
 border: 1px solid transparent;
 border-radius: var(--radius-medium);
 font: inherit;
-font-size: 0.875rem;
+font-size: 0.7rem;
 font-weight: 750;
 cursor: pointer;
 transition:
@@ -465,8 +473,8 @@ border-color: var(--color-primary);
 display: flex;
 align-items: flex-start;
 gap: 10px;
-margin-top: 28px;
-padding-top: 20px;
+margin-top: 15px;
+padding-top: 18px;
 border-top: 1px solid var(--color-border);
 color: var(--color-text-muted);
 font-size: 0.8rem;
